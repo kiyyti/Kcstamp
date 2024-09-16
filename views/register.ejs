@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/user/register" method="">
+            <% if (errors != null && errors.length > 0) {%>
+                <% for (let i = 0; i < errors.length; i++) { %>
+                    <p class="error">
+                        <%= errors[i] %>
+                    </p>
+                <% } %>
+            <% } %>
+        
+            <div>
+                <p>email</p>
+                <input class="email" type="email" name="email">
+            </div>
+            <div>
+                <p>Name</p>
+                <input class="Name" type="text" name="Name">
+            </div>
+            <div>
+                <p>Name หลัง</p>
+                <input class="LastName" type="text" name="LastName">
+            </div>
+            <div>
+                <p>รหัสประจำตัวนักเรียน</p>
+                <input class="pass" type="password" name="password">
+            </div>
+            <div>
+            <button class="regis" type="submit">สมัคร</button>
+        </form>
+    </form>
+    <br>
+</body>
+</html>
